@@ -1,0 +1,13 @@
+version: "3"
+services:
+  orders:
+    build: ./Orders
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./Orders/app:/code
+    environment:
+      FLASK_ENV: development
+    env_file:
+      - ./Orders/.env
+  
